@@ -1,0 +1,58 @@
+{
+  "name": "@vibe-coder/cli",
+  "version": "1.0.8",
+  "description": "Vibe Coding development tool",
+  "private": false,
+  "type": "module",
+  "author": "HelloGGX",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HelloGGX/skill.git"
+  },
+  "bin": {
+    "vibe": "./bin/vibe"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "bun run src/cli.ts",
+    "build": "bun run scripts/build.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build",
+    "publish:snapshot": "bun publish --tag snapshot"
+  },
+  "keywords": [
+    "cli",
+    "agent-skills",
+    "skills",
+    "vibe-coding"
+  ],
+  "dependencies": {
+    "@clack/prompts": "^1.0.1",
+    "gray-matter": "4.0.3",
+    "jsonc-parser": "3.3.1",
+    "picocolors": "^1.1.1",
+    "simple-git": "^3.32.2"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "@types/node": "catalog:",
+    "@vitest/ui": "4.0.18",
+    "typescript": "catalog:",
+    "vitest": "4.0.18"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/HelloGGX/skill/issues"
+  },
+  "homepage": "https://github.com/HelloGGX/skill#readme"
+}
