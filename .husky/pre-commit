@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+echo "Running pre-commit checks..."
+
+# Run type checking
+echo "-> Type checking..."
+bun turbo typecheck
+
+# Run tests
+echo "-> Running tests..."
+bun turbo test
+
+echo "✓ All pre-commit checks passed!"
